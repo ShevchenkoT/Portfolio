@@ -161,6 +161,7 @@ body {
   margin: 0;
   padding: 0;
   z-index: 1;
+  overflow: hidden;
 }
 
 .main-background {
@@ -189,7 +190,6 @@ body {
 }
 
 .main-page .main-content {
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,8 +207,6 @@ body {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  -webkit-filter: brightness(100%);
-          filter: brightness(100%);
 }
 
 .main-page .main-content__name {
@@ -262,16 +260,30 @@ body {
           flex-direction: row;
 }
 
+.second-page .about-content .element-show {
+  opacity: 1;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
 .second-page .about-content__photo {
   width: 35%;
   height: 100%;
   background: url("../assets/img/myPhoto.jpg") 50% 0/cover no-repeat;
+  opacity: 0;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
 }
 
 .second-page .about-content__text {
   width: 65%;
   height: 100%;
   padding-left: 1.8rem;
+  opacity: 0;
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
 }
 
 .second-page .about-content__text > span {
@@ -443,10 +455,6 @@ body {
   }
 }
 
-.active {
-  color: var(--red-color) !important;
-}
-
 .third-page {
   position: relative;
   width: 100%;
@@ -464,18 +472,39 @@ body {
           justify-content: center;
 }
 
-.third-page #myCarousel {
+.third-page .carousel {
   width: 800px;
   height: 600px;
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
-.third-page #myCarousel .carousel-inner {
+.third-page .carousel .carousel-inner {
   width: 100%;
   height: 100%;
 }
 
-.third-page #myCarousel .carousel-inner .carousel-item {
+.third-page .carousel .carousel-inner .carousel-item {
   width: 100%;
   height: 100%;
+}
+
+.third-page .carousel .container {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+}
+
+.third-page .element-show {
+  opacity: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.active {
+  color: var(--red-color) !important;
 }
 /*# sourceMappingURL=style.css.map */
