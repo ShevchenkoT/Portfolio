@@ -10,5 +10,17 @@ myTab.addEventListener('click', ({ target }) => {
     link.classList.remove('active');
   });
   target.classList.add('active');
-  console.log(target);
 });
+
+const containers = document.querySelectorAll('.container');
+function changeLinkState() {
+  let index = containers.length;
+
+  while (--index && window.scrollY + 50 < containers[index].offsetTop) {}
+
+  navLinks.forEach((link) => link.classList.remove('active'));
+  navLinks[index].classList.add('active');
+}
+
+changeLinkState();
+window.addEventListener('scroll', changeLinkState);

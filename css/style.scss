@@ -123,6 +123,7 @@ body {
   font-weight: 800;
   font-size: 18px;
   padding: 1.5rem 5%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
 
   .navbar-brand {
     font-size: 30px;
@@ -166,6 +167,16 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  z-index: 1;
+}
+
+.main-background {
+  background: url('../assets/img/fp-img.jpg') 0 0/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  filter: brightness(20%);
+  z-index: 0;
+  position: fixed;
 }
 
 .main-page {
@@ -176,14 +187,7 @@ body {
   position: relative;
   display: flex;
 
-  .main-page__background {
-    position: absolute;
-    background: url('../assets/img/fp-img.jpg') 0 0/cover no-repeat;
-    width: 100%;
-    height: 100%;
-    filter: brightness(20%);
-    z-index: 0;
-  }
+
 
   .main-content {
     z-index: 1;
@@ -217,29 +221,15 @@ body {
 @media(max-width:767px) {
   .main-page {
     .main-content {
-      z-index: 1;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      &__photo {
-        background: url('../assets/img/myPhoto.jpg') 0 0/cover no-repeat;
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        filter: brightness(100%);
-      }
 
       &__name {
-        color: var(--red-color);
-        font-weight: 600;
+
         font-size: 36px;
-        width: 100%;
+
       }
 
       &__position {
-        color: #fff;
         font-size: 18px;
       }
     }
@@ -248,11 +238,15 @@ body {
 }
 
 .second-page {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  background: var(--second-background);
+  padding: 1rem;
 
   .about-content {
     width: 1000px;
@@ -261,16 +255,16 @@ body {
     flex-direction: row;
 
     &__photo {
-      border: 1px solid rgb(0, 255, 0);
+      border: 1px solid var(--red-color);
       width: 35%;
       height: 100%;
-      //background: url('../assets/img/myPhoto.jpg') 0 0/cover no-repeat;
+      //background: url('../assets/img/myPhoto.jpg') 50% 0/cover no-repeat;
     }
 
     &__text {
       width: 65%;
       height: 100%;
-      padding: 0 1.8rem;
+      padding-left: 1.8rem;
 
       &>span {
         color: var(--red-color);
@@ -295,7 +289,7 @@ body {
 
       &>p {
         color: rgb(202, 202, 202);
-        max-width: 500px;
+        max-width: 100%;
       }
 
     }
@@ -303,10 +297,11 @@ body {
     &__about {
       border: 1px solid var(--red-color);
       border-radius: .25rem;
-      width: 500px;
+      width: 100%;
       height: 120px;
       margin: 2rem 0;
       padding: 1rem 1rem 1.2rem;
+      overflow: hidden;
 
       table {
         width: 100%;
@@ -318,7 +313,7 @@ body {
         flex-wrap: wrap;
         align-content: flex-start;
         align-content: stretch;
-        width: 112%;
+        width: 100%;
         max-height: 100px;
 
         tr {
@@ -350,6 +345,71 @@ body {
   }
 }
 
+@media(max-width:992px) {
+  .second-page {
+    .about-content {
+
+      height: 350px;
+
+      table {
+        font-size: 14px;
+      }
+
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .second-page {
+    .about-content {
+      height: 300px;
+
+      &__text {
+        width: 65%;
+        height: 100%;
+        padding-left: 1rem;
+
+        &>span {
+          font-size: 18px;
+        }
+
+        &>h3 {
+          font-size: 24px;
+
+          &::after {
+            margin: .2rem 0 1rem 0;
+          }
+        }
+
+        &>p {
+          font-size: 12px;
+        }
+
+      }
+
+      &__about {
+        max-width: 85%;
+        height: 145px;
+        margin: 1rem 0;
+        padding: 0.5rem 0.5rem 0.6rem;
+
+        table {
+          font-size: 12px;
+        }
+
+        tbody {
+          flex-direction: column;
+          flex-wrap: nowrap;
+        }
+      }
+
+      &__btn-download {
+        padding: 6px 18px 8px;
+      }
+    }
+  }
+}
+
 
 
 
@@ -357,14 +417,11 @@ body {
   color: var(--red-color) !important;
 }
 
-.second-page {
-  width: 100%;
-  height: 100%;
-  background: var(--second-background);
-}
 
 .third-page {
+  position: relative;
   width: 100%;
   height: 100%;
   background: var(--third-background);
+  z-index: 1;
 }
