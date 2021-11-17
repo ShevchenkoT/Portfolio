@@ -155,6 +155,48 @@ body {
   }
 }
 
+.left-marker {
+  position: absolute;
+  left: 10px;
+  bottom: 80px;
+  display: inherit;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.left-marker::before {
+  content: '';
+  display: block;
+  width: 45px;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-transform: translateY(9px);
+          transform: translateY(9px);
+  margin-right: 10px;
+}
+
+.container-marker {
+  position: absolute;
+  right: 0;
+  top: 130px;
+  display: inherit;
+  font-size: 38px;
+  color: #313348;
+  font-weight: 700;
+}
+
+.container-marker::after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 3px;
+  background-color: var(--red-color);
+  -webkit-transform: translateY(18px);
+          transform: translateY(18px);
+  margin-left: 5px;
+}
+
 .content-container {
   max-width: 100%;
   height: 100vh;
@@ -476,8 +518,8 @@ body {
   width: 800px;
   height: 600px;
   opacity: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
 }
 
 .third-page .carousel .carousel-inner {
@@ -498,8 +540,8 @@ body {
 
 .third-page .element-show {
   opacity: 1;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1.3s;
+  transition: all 1.3s;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
