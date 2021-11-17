@@ -24,3 +24,19 @@ function changeLinkState() {
 
 changeLinkState();
 window.addEventListener('scroll', changeLinkState);
+
+function onEntry(entry) {
+  entry.forEach((change) => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
+}
+
+const observer = new IntersectionObserver(onEntry, {
+  threshold: [0.5]
+});
+const elements = document.querySelectorAll('.element-animation');
+elements.forEach((el) => {
+  observer.observe(el);
+});

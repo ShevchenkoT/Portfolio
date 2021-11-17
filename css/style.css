@@ -263,9 +263,9 @@ body {
 }
 
 .second-page .about-content__photo {
-  border: 1px solid var(--red-color);
   width: 35%;
   height: 100%;
+  background: url("../assets/img/myPhoto.jpg") 50% 0/cover no-repeat;
 }
 
 .second-page .about-content__text {
@@ -367,7 +367,7 @@ body {
 
 @media (max-width: 767px) {
   .second-page .about-content {
-    height: 300px;
+    height: 250px;
   }
   .second-page .about-content__text {
     width: 65%;
@@ -388,7 +388,7 @@ body {
   }
   .second-page .about-content__about {
     max-width: 85%;
-    height: 145px;
+    height: 168px;
     margin: 1rem 0;
     padding: 0.5rem 0.5rem 0.6rem;
   }
@@ -405,6 +405,41 @@ body {
   }
   .second-page .about-content__btn-download {
     padding: 6px 18px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .second-page {
+    padding: .2rem;
+  }
+  .second-page .about-content {
+    height: 200px;
+  }
+  .second-page .about-content__text {
+    padding-left: .5rem;
+  }
+  .second-page .about-content__text > span {
+    font-size: 14px;
+  }
+  .second-page .about-content__text > h3 {
+    font-size: 20px;
+  }
+  .second-page .about-content__text > h3::after {
+    margin: .2rem 0 1rem 0;
+  }
+  .second-page .about-content__text > p {
+    font-size: 9px;
+  }
+  .second-page .about-content__about {
+    height: 155px;
+    margin: .5rem 0;
+  }
+  .second-page .about-content__about table {
+    font-size: 9px;
+  }
+  .second-page .about-content__btn-download {
+    padding: 5px 16px 7px;
+    font-size: 12px;
   }
 }
 

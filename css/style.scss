@@ -255,10 +255,10 @@ body {
     flex-direction: row;
 
     &__photo {
-      border: 1px solid var(--red-color);
+      //border: 1px solid var(--red-color);
       width: 35%;
       height: 100%;
-      //background: url('../assets/img/myPhoto.jpg') 50% 0/cover no-repeat;
+      background: url('../assets/img/myPhoto.jpg') 50% 0/cover no-repeat;
     }
 
     &__text {
@@ -362,7 +362,7 @@ body {
 @media(max-width:767px) {
   .second-page {
     .about-content {
-      height: 300px;
+      height: 250px;
 
       &__text {
         width: 65%;
@@ -389,7 +389,7 @@ body {
 
       &__about {
         max-width: 85%;
-        height: 145px;
+        height: 168px;
         margin: 1rem 0;
         padding: 0.5rem 0.5rem 0.6rem;
 
@@ -405,6 +405,52 @@ body {
 
       &__btn-download {
         padding: 6px 18px 8px;
+      }
+    }
+  }
+}
+
+@media(max-width:480px) {
+  .second-page {
+    padding: .2rem;
+
+    .about-content {
+      height: 200px;
+
+      &__text {
+        padding-left: .5rem;
+
+        &>span {
+          font-size: 14px;
+        }
+
+        &>h3 {
+          font-size: 20px;
+
+          &::after {
+            margin: .2rem 0 1rem 0;
+          }
+        }
+
+        &>p {
+          font-size: 9px;
+        }
+
+      }
+
+      &__about {
+        height: 155px;
+        margin: .5rem 0;
+
+        table {
+          font-size: 9px;
+        }
+
+      }
+
+      &__btn-download {
+        padding: 5px 16px 7px;
+        font-size: 12px;
       }
     }
   }
