@@ -12,7 +12,7 @@ myTab.addEventListener('click', ({ target }) => {
   target.classList.add('active');
 });
 
-const containers = document.querySelectorAll('.container');
+const containers = document.querySelectorAll('.content-container');
 function changeLinkState() {
   let index = containers.length;
 
