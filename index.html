@@ -11,18 +11,17 @@
 </head>
 
 <body>
+  <div id="hideAll" class="hideAll"></div>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
 
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><span>Shevchenko</span>T</a>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-end ml-auto " id="navbarCollapse">
-
         <ul class="navbar-nav justify-content-end" id="myTab" role="tablist">
           <li class="nav-item align-self-end">
             <a class="nav-link text-right active" aria-current="page" href="#home">Home</a>
@@ -34,7 +33,7 @@
             <a class="nav-link text-right " aria-current="page" href="#resume">Projects</a>
           </li>
           <li class="nav-item align-self-end">
-            <a class="nav-link text-right " aria-current="page" href="#">Contact</a>
+            <a class="nav-link text-right " aria-current="page" href="#contact">Contact</a>
           </li>
           <li class="nav-item align-self-end ml-auto">
             <a class="btn mr-right" aria-current="page" href="#">Contact Me</a>
@@ -111,17 +110,20 @@
             download="Shevchyk Taras CV.pdf">Download CV</a>
         </div>
       </div>
-
-
     </div>
   </div>
 
   <div class="content-container" id="resume">
-
     <div class="third-page ">
+      <div class="third-page__title">
+        <span>What I Do</span>
+        <h4>My Projects</h4>
+      </div>
+
       <div class="container-marker">
         <p>02</p>
       </div>
+
       <div id="myCarousel" class="carousel slide element-animation" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -133,50 +135,63 @@
           <div class="carousel-item active">
             <div class="container">
 
-
-
-
-            </div>
-          </div>
-          <!-- <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            </svg>
-
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Some representative placeholder content for the second slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+              <div class="container__photo" id="your-store">
+              </div>
+              <div class="container__info">
+                <span>Your Store</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, iure
+                  possimus in voluptates voluptatem odio.</p>
+                <a href="https://yourstore-01.web.app/" target="_blank">Link</a>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            </svg>
-
             <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>One more for good measure.</h1>
-                <p>Some representative placeholder content for the third slide of this carousel.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+
+              <div class="container__photo" id="card-game"></div>
+              <div class="container__info">
+                <span>Card Game</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, iure
+                  possimus in voluptates voluptatem odio.</p>
+                <a href="https://game-cards-f2ed6.web.app/" target="_blank">Link</a>
               </div>
             </div>
-          </div> -->
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
 
+              <div class="container__photo"></div>
+              <div class="container__info">
+                <span>Your Store</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, iure
+                  possimus in voluptates voluptatem odio.</p>
+                <a href="https://yourstore-01.web.app/" target="_blank">Link</a>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
     </div>
   </div>
+  <div class="content-container" id="contact">
+
+    <div class="four-page">
+      <div class="container-marker">
+        <p>03</p>
+      </div>
+    </div>
+  </div>
+
+
   <script src="js/bootstrap.js"></script>
   <script src="js/script.js"></script>
 </body>

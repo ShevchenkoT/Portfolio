@@ -93,13 +93,14 @@ a {
   text-decoration: none
 }
 
-//
+
 :root {
   --red-color: #f75f5e;
   --red-hover-color: #ff4848;
   --red-active-color: #ff3737;
   --second-background: #1f2233;
   --third-background: #25273e;
+  --four-background: #2a2d47;
 }
 
 
@@ -190,7 +191,7 @@ body {
   top: 130px;
   display: inherit;
   font-size: 38px;
-  color: #313348;
+  color: #8c9194;
   font-weight: 700;
 
   &::after {
@@ -211,8 +212,6 @@ body {
   padding: 0;
   z-index: 1;
   overflow: hidden;
-
-
 }
 
 .main-background {
@@ -222,6 +221,21 @@ body {
   filter: brightness(20%);
   z-index: 0;
   position: fixed;
+}
+
+.hideAll {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background-color: #000000;
+  z-index: 99;
+  /* Higher than anything else in the document */
+
 }
 
 .main-page {
@@ -520,35 +534,115 @@ body {
   align-items: center;
   justify-content: center;
 
+  &__title {
+    position: absolute;
+    top: 100px;
+    left: 150px;
 
+    &>span {
+      color: var(--red-color);
+      font-size: 22px;
+      font-weight: 500;
+    }
 
+    &>h4 {
+      font-size: 28px;
+      font-weight: 500;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 1.5px;
+        background: var(--red-color);
+        margin: .5rem 0 2rem 0;
+
+      }
+    }
+  }
 
   .carousel {
-    width: 800px;
-    height: 600px;
-
+    width: 1200px;
+    height: 650px;
     opacity: 0;
     transform: translateY(15%);
-
-
 
     .carousel-inner {
       width: 100%;
       height: 100%;
 
-
       .carousel-item {
-
         width: 100%;
         height: 100%;
-
       }
     }
 
     .container {
-      border: 1px solid red;
+      //border: 1px solid red;
       width: 100%;
       height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #your-store {
+        background: url('../assets/img/mySites/yourStore.png') 50%/cover no-repeat;
+      }
+
+      #card-game {
+        background: url('../assets/img/mySites/cardGame.png') 50%/cover no-repeat;
+      }
+
+      &__photo {
+        transition: all 500ms;
+        width: 440px;
+        height: 240px;
+        margin: 1rem;
+        border-radius: .25rem;
+        border: 2px solid var(--red-color);
+
+      }
+
+      &__info {
+        margin: 1rem;
+        max-width: 350px;
+
+
+        &>span {
+          color: var(--red-color);
+          font-size: 30px;
+          font-weight: 500;
+          display: inline-block;
+          margin-bottom: 2rem;
+        }
+
+        &>p {
+          color: #ffffff;
+        }
+
+        &>a {
+          padding: 7px 20px 9px;
+          background: var(--red-color);
+          color: #ffffff;
+          border-radius: .25rem;
+          cursor: pointer;
+          transition: background-color 200ms ease-in-out;
+          margin-top: 2rem;
+          display: inline-block;
+
+          &:hover {
+            background-color: var(--red-hover-color);
+          }
+
+          &:active {
+            background-color: var(--red-active-color);
+            box-shadow: 0px -1px 4px 4px rgba(255, 98, 98, 0.555);
+          }
+        }
+
+      }
+
+
     }
   }
 
@@ -559,6 +653,45 @@ body {
   }
 }
 
+@media(max-width:992px) {
+  .third-page {
+   
+    .container {
+      flex-direction: column;
+    }
+  }
+}
+
+@media(max-width:767px) {
+ 
+}
+
+@media(max-width:480px) {
+ 
+}
+
+
+.four-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--four-background);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
 .active {
   color: var(--red-color) !important;
+}
+
+.zoom-img {
+  transform: scale(2) translateX(22%);
 }

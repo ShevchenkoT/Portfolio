@@ -29,3 +29,27 @@ const elements = document.querySelectorAll('.element-animation');
 elements.forEach((el) => {
   observer.observe(el);
 });
+
+document.getElementById('hideAll').style.display = 'block';
+window.onload = () => {
+  document.getElementById('hideAll').style.display = 'none';
+};
+
+const projectPhotos = document.querySelectorAll('.container__photo');
+
+projectPhotos.forEach((el) => {
+  el.addEventListener('click', ({ target }) => {
+    //target.style.transform = 'scale(1.5)';
+    target.classList.toggle('zoom-img');
+  });
+});
+
+document
+  .querySelector('.third-page')
+  .addEventListener('click', ({ target }) => {
+    if (!target.classList.contains('container__photo')) {
+      projectPhotos.forEach((el) => {
+        el.classList.remove('zoom-img');
+      });
+    }
+  });

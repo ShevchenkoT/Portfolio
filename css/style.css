@@ -99,6 +99,7 @@ a {
   --red-active-color: #ff3737;
   --second-background: #1f2233;
   --third-background: #25273e;
+  --four-background: #2a2d47;
 }
 
 html,
@@ -182,7 +183,7 @@ body {
   top: 130px;
   display: inherit;
   font-size: 38px;
-  color: #313348;
+  color: #8c9194;
   font-weight: 700;
 }
 
@@ -214,6 +215,20 @@ body {
           filter: brightness(20%);
   z-index: 0;
   position: fixed;
+}
+
+.hideAll {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background-color: #000000;
+  z-index: 99;
+  /* Higher than anything else in the document */
 }
 
 .main-page {
@@ -514,9 +529,35 @@ body {
           justify-content: center;
 }
 
+.third-page__title {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+}
+
+.third-page__title > span {
+  color: var(--red-color);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.third-page__title > h4 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.third-page__title > h4::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 1.5px;
+  background: var(--red-color);
+  margin: .5rem 0 2rem 0;
+}
+
 .third-page .carousel {
-  width: 800px;
-  height: 600px;
+  width: 1200px;
+  height: 650px;
   opacity: 0;
   -webkit-transform: translateY(15%);
           transform: translateY(15%);
@@ -533,9 +574,74 @@ body {
 }
 
 .third-page .carousel .container {
-  border: 1px solid red;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.third-page .carousel .container #your-store {
+  background: url("../assets/img/mySites/yourStore.png") 50%/cover no-repeat;
+}
+
+.third-page .carousel .container #card-game {
+  background: url("../assets/img/mySites/cardGame.png") 50%/cover no-repeat;
+}
+
+.third-page .carousel .container__photo {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  width: 440px;
+  height: 240px;
+  margin: 1rem;
+  border-radius: .25rem;
+  border: 2px solid var(--red-color);
+}
+
+.third-page .carousel .container__info {
+  margin: 1rem;
+  max-width: 350px;
+}
+
+.third-page .carousel .container__info > span {
+  color: var(--red-color);
+  font-size: 30px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.third-page .carousel .container__info > p {
+  color: #ffffff;
+}
+
+.third-page .carousel .container__info > a {
+  padding: 7px 20px 9px;
+  background: var(--red-color);
+  color: #ffffff;
+  border-radius: .25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+.third-page .carousel .container__info > a:hover {
+  background-color: var(--red-hover-color);
+}
+
+.third-page .carousel .container__info > a:active {
+  background-color: var(--red-active-color);
+  -webkit-box-shadow: 0px -1px 4px 4px rgba(255, 98, 98, 0.555);
+          box-shadow: 0px -1px 4px 4px rgba(255, 98, 98, 0.555);
 }
 
 .third-page .element-show {
@@ -546,7 +652,38 @@ body {
           transform: translateY(0);
 }
 
+@media (max-width: 992px) {
+  .third-page .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.four-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--four-background);
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .active {
   color: var(--red-color) !important;
+}
+
+.zoom-img {
+  -webkit-transform: scale(2) translateX(22%);
+          transform: scale(2) translateX(22%);
 }
 /*# sourceMappingURL=style.css.map */
