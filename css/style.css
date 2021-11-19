@@ -201,6 +201,7 @@ body {
 .content-container {
   max-width: 100%;
   height: 100vh;
+  min-height: 700px;
   margin: 0;
   padding: 0;
   z-index: 1;
@@ -527,6 +528,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 1rem 0;
 }
 
 .third-page__title {
@@ -556,7 +558,7 @@ body {
 }
 
 .third-page .carousel {
-  width: 1200px;
+  width: 100%;
   height: 650px;
   opacity: 0;
   -webkit-transform: translateY(15%);
@@ -585,6 +587,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 2rem;
 }
 
 .third-page .carousel .container #your-store {
@@ -598,8 +601,8 @@ body {
 .third-page .carousel .container__photo {
   -webkit-transition: all 500ms;
   transition: all 500ms;
-  width: 440px;
-  height: 240px;
+  height: 17vw;
+  width: 32vw;
   margin: 1rem;
   border-radius: .25rem;
   border: 2px solid var(--red-color);
@@ -653,11 +656,66 @@ body {
 }
 
 @media (max-width: 992px) {
-  .third-page .container {
+  .third-page__title {
+    top: 80px;
+    left: 70px;
+  }
+  .third-page .carousel .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .third-page .carousel .container #your-store {
+    background: url("../assets/img/mySites/yourStore.png") 50%/cover no-repeat;
+  }
+  .third-page .carousel .container #card-game {
+    background: url("../assets/img/mySites/cardGame.png") 50%/cover no-repeat;
+  }
+  .third-page .carousel .container__photo {
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    width: 440px;
+    height: 240px;
+    margin: 1rem;
+    border-radius: .25rem;
+    border: 2px solid var(--red-color);
+  }
+  .third-page .carousel .container__info {
+    margin: 1rem;
+    max-width: 350px;
+  }
+  .third-page .carousel .container__info > span {
+    color: var(--red-color);
+    font-size: 30px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .third-page .carousel .container__info > p {
+    color: #ffffff;
+  }
+  .third-page .carousel .container__info > a {
+    padding: 7px 20px 9px;
+    background: var(--red-color);
+    color: #ffffff;
+    border-radius: .25rem;
+    cursor: pointer;
+    -webkit-transition: background-color 200ms ease-in-out;
+    transition: background-color 200ms ease-in-out;
+    margin-top: 0;
+    display: inline-block;
   }
 }
 
@@ -678,12 +736,49 @@ body {
           justify-content: center;
 }
 
+.four-page__title {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+}
+
+.four-page__title > span {
+  color: var(--red-color);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.four-page__title > h4 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.four-page__title > h4::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 1.5px;
+  background: var(--red-color);
+  margin: .5rem 0 2rem 0;
+}
+
+.four-page .container .row .col {
+  height: 100px;
+  border: 2px solid var(--red-color);
+}
+
+.footer {
+  position: relative;
+  background: var(--four-background);
+  z-index: 1;
+}
+
 .active {
   color: var(--red-color) !important;
 }
 
 .zoom-img {
-  -webkit-transform: scale(2) translateX(22%);
-          transform: scale(2) translateX(22%);
+  -webkit-transform: scale(1.6) translateX(20%);
+          transform: scale(1.6) translateX(20%);
 }
 /*# sourceMappingURL=style.css.map */

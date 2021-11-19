@@ -208,6 +208,7 @@ body {
 .content-container {
   max-width: 100%;
   height: 100vh;
+  min-height: 700px;
   margin: 0;
   padding: 0;
   z-index: 1;
@@ -533,6 +534,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem 0;
 
   &__title {
     position: absolute;
@@ -562,7 +564,7 @@ body {
   }
 
   .carousel {
-    width: 1200px;
+    width: 100%;
     height: 650px;
     opacity: 0;
     transform: translateY(15%);
@@ -584,6 +586,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-top: 2rem;
 
       #your-store {
         background: url('../assets/img/mySites/yourStore.png') 50%/cover no-repeat;
@@ -595,8 +598,10 @@ body {
 
       &__photo {
         transition: all 500ms;
-        width: 440px;
-        height: 240px;
+        // width: 440px;
+        //height: 240px;
+        height: 17vw;
+        width: 32vw;
         margin: 1rem;
         border-radius: .25rem;
         border: 2px solid var(--red-color);
@@ -655,20 +660,86 @@ body {
 
 @media(max-width:992px) {
   .third-page {
-   
-    .container {
-      flex-direction: column;
+    &__title {
+      top: 80px;
+      left: 70px;
+    }
+
+    // .carousel {
+
+    //   width: 1200px;
+    //   height: 650px;
+    //   opacity: 0;
+    //   transform: translateY(15%);
+    // }
+    .carousel {
+      .container {
+        flex-direction: column;
+
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #your-store {
+          background: url('../assets/img/mySites/yourStore.png') 50%/cover no-repeat;
+        }
+
+        #card-game {
+          background: url('../assets/img/mySites/cardGame.png') 50%/cover no-repeat;
+        }
+
+        &__photo {
+          transition: all 500ms;
+          width: 440px;
+          height: 240px;
+          margin: 1rem;
+          border-radius: .25rem;
+          border: 2px solid var(--red-color);
+
+        }
+
+        &__info {
+          margin: 1rem;
+          max-width: 350px;
+
+          &>span {
+            color: var(--red-color);
+            font-size: 30px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 0;
+          }
+
+          &>p {
+            color: #ffffff;
+          }
+
+          &>a {
+            padding: 7px 20px 9px;
+            background: var(--red-color);
+            color: #ffffff;
+            border-radius: .25rem;
+            cursor: pointer;
+            transition: background-color 200ms ease-in-out;
+            margin-top: 0;
+            display: inline-block;
+
+
+          }
+
+        }
+
+      }
+
     }
   }
 }
 
-@media(max-width:767px) {
- 
-}
+@media(max-width:767px) {}
 
-@media(max-width:480px) {
- 
-}
+@media(max-width:480px) {}
 
 
 .four-page {
@@ -680,18 +751,64 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &__title {
+    position: absolute;
+    top: 100px;
+    left: 150px;
+
+    &>span {
+      color: var(--red-color);
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    &>h4 {
+      font-size: 28px;
+      font-weight: 500;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 1.5px;
+        background: var(--red-color);
+        margin: .5rem 0 2rem 0;
+
+      }
+    }
+  }
+
+  .container {
+
+    .row {
+      .col {
+        height: 100px;
+        border: 2px solid var(--red-color);
+      }
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  // width: 100%;
+  // height: 100%;
+  background: var(--four-background);
+  z-index: 1;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
 
 
 
 
 
+  .active {
+    color: var(--red-color) !important;
+  }
 
-
-.active {
-  color: var(--red-color) !important;
-}
-
-.zoom-img {
-  transform: scale(2) translateX(22%);
-}
+  .zoom-img {
+    transform: scale(1.6) translateX(20%);
+  }
