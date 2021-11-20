@@ -601,8 +601,8 @@ body {
 .third-page .carousel .container__photo {
   -webkit-transition: all 500ms;
   transition: all 500ms;
-  height: 17vw;
   width: 32vw;
+  height: 17vw;
   margin: 1rem;
   border-radius: .25rem;
   border: 2px solid var(--red-color);
@@ -655,67 +655,60 @@ body {
           transform: translateY(0);
 }
 
+.zoom-img {
+  -webkit-transform: scale(1.6) translateX(20%);
+          transform: scale(1.6) translateX(20%);
+}
+
 @media (max-width: 992px) {
+  .zoom-img {
+    -webkit-transform: none;
+            transform: none;
+  }
   .third-page__title {
     top: 80px;
-    left: 70px;
+    left: 50px;
   }
   .third-page .carousel .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .third-page .carousel .container #your-store {
-    background: url("../assets/img/mySites/yourStore.png") 50%/cover no-repeat;
-  }
-  .third-page .carousel .container #card-game {
-    background: url("../assets/img/mySites/cardGame.png") 50%/cover no-repeat;
   }
   .third-page .carousel .container__photo {
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
-    width: 440px;
-    height: 240px;
-    margin: 1rem;
-    border-radius: .25rem;
-    border: 2px solid var(--red-color);
+    width: 50vw;
+    height: 28vw;
   }
   .third-page .carousel .container__info {
-    margin: 1rem;
-    max-width: 350px;
+    text-align: center;
   }
   .third-page .carousel .container__info > span {
     color: var(--red-color);
-    font-size: 30px;
-    font-weight: 500;
-    display: inline-block;
-    margin-bottom: 0;
+    font-size: 28px;
+    margin-bottom: .5rem;
   }
   .third-page .carousel .container__info > p {
-    color: #ffffff;
+    font-size: 14px;
   }
   .third-page .carousel .container__info > a {
-    padding: 7px 20px 9px;
-    background: var(--red-color);
-    color: #ffffff;
-    border-radius: .25rem;
-    cursor: pointer;
-    -webkit-transition: background-color 200ms ease-in-out;
-    transition: background-color 200ms ease-in-out;
-    margin-top: 0;
-    display: inline-block;
+    margin-top: .5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .third-page__title {
+    top: 80px;
+    left: 70px;
+  }
+  .third-page__title > span {
+    font-size: 16px;
+  }
+  .third-page__title > h4 {
+    font-size: 18px;
+  }
+  .third-page .carousel .container__photo {
+    width: 75vw;
+    height: 40vw;
   }
 }
 
@@ -748,12 +741,12 @@ body {
   font-weight: 500;
 }
 
-.four-page__title > h4 {
+.four-page__title > h5 {
   font-size: 28px;
   font-weight: 500;
 }
 
-.four-page__title > h4::after {
+.four-page__title > h5::after {
   content: '';
   display: block;
   width: 50px;
@@ -762,9 +755,34 @@ body {
   margin: .5rem 0 2rem 0;
 }
 
+.four-page .container {
+  padding-top: 5rem;
+}
+
 .four-page .container .row .col {
-  height: 100px;
   border: 2px solid var(--red-color);
+  position: relative;
+  text-align: center;
+}
+
+.four-page .container .row .col:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.four-page .container .first-cols .col {
+  height: 100px;
+}
+
+.four-page .container .second-cols .col {
+  height: 300px;
+}
+
+.four-page .container a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .footer {
@@ -775,10 +793,5 @@ body {
 
 .active {
   color: var(--red-color) !important;
-}
-
-.zoom-img {
-  -webkit-transform: scale(1.6) translateX(20%);
-          transform: scale(1.6) translateX(20%);
 }
 /*# sourceMappingURL=style.css.map */
