@@ -859,13 +859,13 @@ body {
   background-color: rgba(255, 255, 255, 0.096);
 }
 
-.four-page .container__massager {
+.four-page .container__messenger {
   border-left: 2px solid var(--border-color);
   border-right: 2px solid var(--border-color);
 }
 
-.four-page .container__massager--photo {
-  background: url("../assets/img/massager.png") 50%/cover no-repeat;
+.four-page .container__messenger--photo {
+  background: url("../assets/img/messenger.png") 50%/cover no-repeat;
   width: 120px;
   height: 120px;
   -webkit-filter: invert(1);
@@ -873,29 +873,40 @@ body {
   margin-bottom: 1rem;
 }
 
-.four-page .container__massager > p {
+.four-page .container__messenger > p {
   font-size: 30px;
   font-weight: 600;
   max-width: 190px;
+  text-align: center;
 }
 
-.four-page .container__massager:hover {
+.four-page .container__messenger:hover {
   background-color: rgba(255, 255, 255, 0.096);
 }
 
-.four-page .container__networks-links {
+.four-page .container__networks {
   padding: 0 5rem 4rem 0;
 }
 
-.four-page .container__networks-links > p {
+.four-page .container__networks > p {
   font-size: 22px;
   font-weight: 500;
   color: var(--red-color);
 }
 
+.four-page .container__networks--links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .four-page .container__link {
   width: 140px;
-  margin-top: .7rem;
+  margin-top: .8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -935,10 +946,91 @@ body {
   background-color: rgba(255, 255, 255, 0.096);
 }
 
+@media (max-width: 767px) {
+  .four-page__title {
+    top: 80px;
+    left: 50px;
+  }
+  .four-page .container .first-cols .col > p {
+    font-size: 12px;
+  }
+  .four-page .container .first-cols .col > p > span {
+    font-size: 20px;
+  }
+  .four-page .container .second-cols .col {
+    height: 230px;
+  }
+  .four-page .container__git-hub--photo {
+    width: 109px;
+    height: 109px;
+  }
+  .four-page .container__git-hub > p {
+    font-size: 16px;
+  }
+  .four-page .container__messenger--photo {
+    width: 80px;
+    height: 80px;
+  }
+  .four-page .container__messenger > p {
+    font-size: 18px;
+    width: 119px;
+  }
+  .four-page .container__networks {
+    padding: 0 0 4rem 0;
+  }
+  .four-page .container__networks > p {
+    font-size: 18px;
+  }
+  .four-page .container__link {
+    width: 110px;
+  }
+  .four-page .container__link > span {
+    font-size: 14px;
+  }
+  .four-page .container__link--ico {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .four-page__title {
+    top: 80px;
+    left: 50px;
+  }
+  .four-page .container {
+    padding-top: 8rem;
+  }
+  .four-page .container .first-cols .col {
+    height: 80px;
+  }
+  .four-page .container .second-cols .col {
+    height: 200px;
+  }
+  .four-page .container__networks {
+    padding: 0;
+    max-height: 100px;
+    min-width: 100%;
+    border-top: 2px solid var(--border-color);
+  }
+  .four-page .container__networks--links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: .6rem;
+  }
+}
+
 .footer {
   position: relative;
-  background: var(--four-background);
+  background: var(--second-background);
   z-index: 1;
+  padding: 1rem 0;
+}
+
+.footer > .container {
+  color: red;
 }
 
 .active {
