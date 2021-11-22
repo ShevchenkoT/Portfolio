@@ -39,7 +39,6 @@ const projectPhotos = document.querySelectorAll('.container__photo');
 
 projectPhotos.forEach((el) => {
   el.addEventListener('click', ({ target }) => {
-    //target.style.transform = 'scale(1.5)';
     target.classList.toggle('zoom-img');
   });
 });

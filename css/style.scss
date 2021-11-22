@@ -93,7 +93,6 @@ a {
   text-decoration: none
 }
 
-
 :root {
   --red-color: #f75f5e;
   --red-hover-color: #ff4848;
@@ -103,7 +102,6 @@ a {
   --four-background: #2a2d47;
   --border-color: #8c919454;
 }
-
 
 html,
 body {
@@ -118,8 +116,6 @@ body {
   letter-spacing: 1px;
   color: #f2f2f2;
 }
-
-
 
 .navbar {
   font-weight: 800;
@@ -140,7 +136,6 @@ body {
     color: var(--red-color);
     border: 1px solid var(--red-color)
   }
-
 }
 
 @media(max-width:992px) {
@@ -236,8 +231,6 @@ body {
   display: none;
   background-color: #000000;
   z-index: 99;
-  /* Higher than anything else in the document */
-
 }
 
 .main-page {
@@ -247,8 +240,6 @@ body {
   height: 100%;
   position: relative;
   display: flex;
-
-
 
   .main-content {
     display: flex;
@@ -280,8 +271,6 @@ body {
 @media(max-width:767px) {
   .main-page {
     .main-content {
-
-
       &__name {
         font-size: 36px;
       }
@@ -291,7 +280,6 @@ body {
       }
     }
   }
-
 }
 
 .second-page {
@@ -318,7 +306,6 @@ body {
     }
 
     &__photo {
-      //border: 1px solid var(--red-color);
       width: 35%;
       height: 100%;
       background: url('../assets/img/myPhoto.jpg') 50% 0/cover no-repeat;
@@ -350,7 +337,6 @@ body {
           height: 1.5px;
           background: var(--red-color);
           margin: .5rem 0 2rem 0;
-
         }
       }
 
@@ -358,7 +344,6 @@ body {
         color: rgb(202, 202, 202);
         max-width: 100%;
       }
-
     }
 
     &__about {
@@ -386,7 +371,6 @@ body {
         tr {
           display: block;
           margin-bottom: 1rem;
-
         }
       }
     }
@@ -407,7 +391,6 @@ body {
         background-color: var(--red-active-color);
         box-shadow: 0px -1px 4px 4px rgba(255, 98, 98, 0.555);
       }
-
     }
   }
 }
@@ -415,13 +398,11 @@ body {
 @media(max-width:992px) {
   .second-page {
     .about-content {
-
       height: 350px;
 
       table {
         font-size: 14px;
       }
-
     }
   }
 }
@@ -451,7 +432,6 @@ body {
         &>p {
           font-size: 12px;
         }
-
       }
 
       &__about {
@@ -502,7 +482,6 @@ body {
         &>p {
           font-size: 9px;
         }
-
       }
 
       &__about {
@@ -512,7 +491,6 @@ body {
         table {
           font-size: 9px;
         }
-
       }
 
       &__btn-download {
@@ -522,9 +500,6 @@ body {
     }
   }
 }
-
-
-
 
 .third-page {
   position: relative;
@@ -596,6 +571,10 @@ body {
         background: url('../assets/img/mySites/cardGame.png') 50%/cover no-repeat;
       }
 
+      #canvas-paint {
+        background: url('../assets/img/mySites/canvasPaint.png') 50%/cover no-repeat;
+      }
+
       &__photo {
         transition: all 500ms;
         width: 32vw;
@@ -603,13 +582,11 @@ body {
         margin: 1rem;
         border-radius: .25rem;
         border: 2px solid var(--red-color);
-
       }
 
       &__info {
         margin: 1rem;
         max-width: 350px;
-
 
         &>span {
           color: var(--red-color);
@@ -642,10 +619,7 @@ body {
             box-shadow: 0px -1px 4px 4px rgba(255, 98, 98, 0.555);
           }
         }
-
       }
-
-
     }
   }
 
@@ -681,7 +655,6 @@ body {
         }
 
         &__info {
-
           text-align: center;
 
           &>span {
@@ -706,24 +679,20 @@ body {
 @media(max-width:480px) {
   .third-page {
     &__title {
-      &>span {
+      top: 80px;
+      left: 70px;
 
+      &>span {
         font-size: 16px;
       }
 
       &>h4 {
-
         font-size: 18px;
       }
-
-      top: 80px;
-      left: 70px;
     }
 
     .carousel {
       .container {
-
-
         &__photo {
           width: 75vw;
           height: 40vw;
@@ -732,7 +701,6 @@ body {
     }
   }
 }
-
 
 .four-page {
   position: relative;
@@ -743,7 +711,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
 
   &__title {
     position: absolute;
@@ -785,7 +752,7 @@ body {
         align-items: center;
         justify-content: center;
         position: relative;
-        transition: all .3s ease-in-out;
+        transition: background .3s ease-in-out;
 
         a {
           position: absolute;
@@ -833,6 +800,18 @@ body {
 
     &__phone-number {
       border-right: 2px solid var(--border-color);
+
+      &>p {
+        transform: translateX(-50%);
+        opacity: 0;
+      }
+    }
+
+    &__email {
+      &>p {
+        transform: translateX(50%);
+        opacity: 0;
+      }
     }
 
     &__git-hub {
@@ -895,9 +874,23 @@ body {
       &--links {
         display: flex;
         flex-direction: column;
+        opacity: 0;
+        
+        &>:nth-child(1) {
+          transform: translateY(200%);
+        }
 
+        &>:nth-child(2) {
+          transform: translateY(400%);
+
+        }
+
+        &>:nth-child(3) {
+          transform: translateY(600%);
+        }
 
       }
+
 
     }
 
@@ -937,8 +930,21 @@ body {
         background-color: rgba(255, 255, 255, 0.096);
       }
     }
+
+    .element-show {
+      opacity: 1;
+      transform: translate(0);
+      transition: all 1s ease-in-out;
+      .container__link{
+        transition: all 1s linear;
+        
+        transform: translate(0);
+      }
+    }
   }
 }
+
+
 
 @media(max-width:767px) {
   .four-page {
@@ -1053,28 +1059,12 @@ body {
 
 .footer {
   position: relative;
-  // width: 100%;
-  // height: 100%;
-  background: var(--second-background);
-      z-index: 1;
-      padding: 1rem 0;
-      //background: #383c5f;
+  //background: var(--second-background);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  padding: 1rem 0;
+}
 
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
-
-      &>.container {
-      color: red;
-    }
-
-
-  }
-
-
-
-
-
-  .active {
-    color: var(--red-color) !important;
-  }
+.active {
+  color: var(--red-color) !important;
+}

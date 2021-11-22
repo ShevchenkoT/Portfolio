@@ -230,7 +230,6 @@ body {
   display: none;
   background-color: #000000;
   z-index: 99;
-  /* Higher than anything else in the document */
 }
 
 .main-page {
@@ -599,6 +598,10 @@ body {
   background: url("../assets/img/mySites/cardGame.png") 50%/cover no-repeat;
 }
 
+.third-page .carousel .container #canvas-paint {
+  background: url("../assets/img/mySites/canvasPaint.png") 50%/cover no-repeat;
+}
+
 .third-page .carousel .container__photo {
   -webkit-transition: all 500ms;
   transition: all 500ms;
@@ -781,8 +784,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
 }
 
 .four-page .container .row .col a {
@@ -825,6 +828,18 @@ body {
 
 .four-page .container__phone-number {
   border-right: 2px solid var(--border-color);
+}
+
+.four-page .container__phone-number > p {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+}
+
+.four-page .container__email > p {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  opacity: 0;
 }
 
 .four-page .container__git-hub {
@@ -902,6 +917,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  opacity: 0;
+}
+
+.four-page .container__networks--links > :nth-child(1) {
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+}
+
+.four-page .container__networks--links > :nth-child(2) {
+  -webkit-transform: translateY(400%);
+          transform: translateY(400%);
+}
+
+.four-page .container__networks--links > :nth-child(3) {
+  -webkit-transform: translateY(600%);
+          transform: translateY(600%);
 }
 
 .four-page .container__link {
@@ -944,6 +975,21 @@ body {
 
 .four-page .container__link:hover {
   background-color: rgba(255, 255, 255, 0.096);
+}
+
+.four-page .container .element-show {
+  opacity: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.four-page .container .element-show .container__link {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  -webkit-transform: translate(0);
+          transform: translate(0);
 }
 
 @media (max-width: 767px) {
@@ -1024,13 +1070,10 @@ body {
 
 .footer {
   position: relative;
-  background: var(--second-background);
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(0deg, black 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 1;
   padding: 1rem 0;
-}
-
-.footer > .container {
-  color: red;
 }
 
 .active {
