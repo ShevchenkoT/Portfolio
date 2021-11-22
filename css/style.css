@@ -100,6 +100,7 @@ a {
   --second-background: #1f2233;
   --third-background: #25273e;
   --four-background: #2a2d47;
+  --border-color: #8c919454;
 }
 
 html,
@@ -756,33 +757,182 @@ body {
 }
 
 .four-page .container {
-  padding-top: 5rem;
+  padding-top: 8rem;
+  max-width: 100%;
+  margin: auto 0;
+}
+
+.four-page .container .row {
+  background-color: var(--second-background);
 }
 
 .four-page .container .row .col {
-  border: 2px solid var(--red-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  text-align: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.four-page .container .row .col:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+.four-page .container .row .col a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .four-page .container .first-cols .col {
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
   height: 100px;
+}
+
+.four-page .container .first-cols .col:hover {
+  background-color: rgba(255, 255, 255, 0.096);
+}
+
+.four-page .container .first-cols .col > p {
+  color: var(--red-color);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.four-page .container .first-cols .col > p > span {
+  color: #ffffff;
+  text-align: start;
+  display: block;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -1px;
 }
 
 .four-page .container .second-cols .col {
   height: 300px;
 }
 
-.four-page .container a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+.four-page .container__phone-number {
+  border-right: 2px solid var(--border-color);
+}
+
+.four-page .container__git-hub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.four-page .container__git-hub--photo {
+  background: url("../assets/img/github.png") 50%/cover no-repeat;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 1rem;
+}
+
+.four-page .container__git-hub > p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.four-page .container__git-hub:hover {
+  background-color: rgba(255, 255, 255, 0.096);
+}
+
+.four-page .container__massager {
+  border-left: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
+}
+
+.four-page .container__massager--photo {
+  background: url("../assets/img/massager.png") 50%/cover no-repeat;
+  width: 120px;
+  height: 120px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  margin-bottom: 1rem;
+}
+
+.four-page .container__massager > p {
+  font-size: 30px;
+  font-weight: 600;
+  max-width: 190px;
+}
+
+.four-page .container__massager:hover {
+  background-color: rgba(255, 255, 255, 0.096);
+}
+
+.four-page .container__networks-links {
+  padding: 0 5rem 4rem 0;
+}
+
+.four-page .container__networks-links > p {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--red-color);
+}
+
+.four-page .container__link {
+  width: 140px;
+  margin-top: .7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.four-page .container__link > span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.four-page .container__link #facebook-link {
+  background: url("../assets/img/facebook.png") 50%/cover no-repeat;
+}
+
+.four-page .container__link #instagram-link {
+  background: url("../assets/img/instagram.png") 50%/cover no-repeat;
+}
+
+.four-page .container__link #linkedIn-link {
+  background: url("../assets/img/linkedIn.png") 100%/cover no-repeat;
+}
+
+.four-page .container__link--ico {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: .6rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.four-page .container__link:hover {
+  background-color: rgba(255, 255, 255, 0.096);
 }
 
 .footer {
