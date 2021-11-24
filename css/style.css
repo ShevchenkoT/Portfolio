@@ -117,6 +117,28 @@ body {
   color: #f2f2f2;
 }
 
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 9px;
+  background: black;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: dimgray;
+  border-radius: 50px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .navbar {
   font-weight: 800;
   font-size: 18px;
