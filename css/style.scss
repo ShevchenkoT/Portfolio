@@ -301,7 +301,6 @@ body {
 
     .element-show {
       opacity: 1;
-      transition: all 1.5s;
       transform: translate(0);
     }
 
@@ -311,14 +310,16 @@ body {
       background: url('../assets/img/myPhoto.jpg') 50% 0/cover no-repeat;
       opacity: 0;
       transform: translateX(-30%);
+      transition: all .9s;
     }
 
     &__text {
+      transition: all 1.3s;
       width: 65%;
       height: 100%;
       padding-left: 1.8rem;
       opacity: 0;
-      transform: translateX(30%);
+      transform: translateX(50%);
 
       &>span {
         color: var(--red-color);
@@ -573,6 +574,9 @@ body {
 
       #canvas-paint {
         background: url('../assets/img/mySites/canvasPaint.png') 50%/cover no-repeat;
+      }
+      #salary-calculator {
+        background: url('../assets/img/mySites/salCalc.png') 50%/cover no-repeat;
       }
 
       &__photo {
@@ -875,7 +879,7 @@ body {
         display: flex;
         flex-direction: column;
         opacity: 0;
-        
+
         &>:nth-child(1) {
           transform: translateY(200%);
         }
@@ -935,9 +939,9 @@ body {
       opacity: 1;
       transform: translate(0);
       transition: all 1s ease-in-out;
-      .container__link{
-        transition: all 1s linear;
-        
+
+      .container__link {
+        transition: transform 1s linear, background .3s linear;
         transform: translate(0);
       }
     }
