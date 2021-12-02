@@ -118,11 +118,11 @@ body {
 
   &::-webkit-scrollbar {
     width: 9px;
-    background:rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
   }
 
   &::-webkit-scrollbar-track {
-    background:rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
   }
 
   &::-webkit-scrollbar-thumb {
@@ -798,6 +798,10 @@ body {
           background-color: rgba(255, 255, 255, 0.096);
         }
 
+        &:active {
+          background-color: rgba(255, 255, 255, 0.158);
+        }
+
         &>p {
           color: var(--red-color);
           font-size: 18px;
@@ -858,6 +862,10 @@ body {
       &:hover {
         background-color: rgba(255, 255, 255, 0.096);
       }
+
+      &:active {
+        background-color: rgba(255, 255, 255, 0.158);
+      }
     }
 
     &__messenger {
@@ -882,6 +890,10 @@ body {
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.096);
+      }
+
+      &:active {
+        background-color: rgba(255, 255, 255, 0.158);
       }
     }
 
@@ -951,6 +963,10 @@ body {
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.096);
+      }
+
+      &:active {
+        background-color: rgba(255, 255, 255, 0.158);
       }
     }
 

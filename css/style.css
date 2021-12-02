@@ -835,6 +835,10 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.096);
 }
 
+.four-page .container .first-cols .col:active {
+  background-color: rgba(255, 255, 255, 0.158);
+}
+
 .four-page .container .first-cols .col > p {
   color: var(--red-color);
   font-size: 18px;
@@ -902,6 +906,10 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.096);
 }
 
+.four-page .container__git-hub:active {
+  background-color: rgba(255, 255, 255, 0.158);
+}
+
 .four-page .container__messenger {
   border-left: 2px solid var(--border-color);
   border-right: 2px solid var(--border-color);
@@ -925,6 +933,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 .four-page .container__messenger:hover {
   background-color: rgba(255, 255, 255, 0.096);
+}
+
+.four-page .container__messenger:active {
+  background-color: rgba(255, 255, 255, 0.158);
 }
 
 .four-page .container__networks {
@@ -1003,6 +1015,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 .four-page .container__link:hover {
   background-color: rgba(255, 255, 255, 0.096);
+}
+
+.four-page .container__link:active {
+  background-color: rgba(255, 255, 255, 0.158);
 }
 
 .four-page .container .element-show {
