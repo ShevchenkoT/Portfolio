@@ -614,6 +614,10 @@ body::-webkit-scrollbar-thumb:hover {
   padding-top: 2rem;
 }
 
+.third-page .carousel .container #thermometer-iot {
+  background: url("../assets/img/mySites/iot.png") 50%/cover no-repeat;
+}
+
 .third-page .carousel .container #your-store {
   background: url("../assets/img/mySites/yourStore.png") 50%/cover no-repeat;
 }
