@@ -1111,3 +1111,12 @@ body {
 .active {
   color: var(--red-color) !important;
 }
+
+.admin-page {
+  display: block;
+  margin-top: 1rem;
+  color: var(--red-color);
+  &:hover{
+    color: var(--red-hover-color);
+  }
+}

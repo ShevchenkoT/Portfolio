@@ -1129,4 +1129,14 @@ body::-webkit-scrollbar-thumb:hover {
 .active {
   color: var(--red-color) !important;
 }
+
+.admin-page {
+  display: block;
+  margin-top: 1rem;
+  color: var(--red-color);
+}
+
+.admin-page:hover {
+  color: var(--red-hover-color);
+}
 /*# sourceMappingURL=style.css.map */
