@@ -511,7 +511,7 @@ body::-webkit-scrollbar-thumb:hover {
   padding-top: 2rem;
 }
 .third-page .carousel .container #lean-analytics {
-  background: url("../assets/img/mySites/lean.png") 50%/cover no-repeat;
+  background: url("../assets/img/mySites/lean.webp") 50%/cover no-repeat;
 }
 .third-page .carousel .container #thermometer-iot {
   background: url("../assets/img/mySites/iot.png") 50%/cover no-repeat;
